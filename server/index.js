@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ limit : "30mb", extended: true }));
 app.use(cors());
 
 app.use('/posts',postRoutes);
-const CONNECTION_URL = "mongodb+srv://Ken:ken123@cluster0.0ygaclo.mongodb.net/";
+const CONNECTION_URL = process.env.URI;
 
 const PORT = process.env.PORT || 5000;
 
